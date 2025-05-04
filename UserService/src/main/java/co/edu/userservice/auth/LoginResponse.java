@@ -1,4 +1,4 @@
-package co.edu.userservice.Auth;
+package co.edu.userservice.auth;
 
 
 import lombok.AllArgsConstructor;

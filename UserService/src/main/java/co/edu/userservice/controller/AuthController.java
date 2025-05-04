@@ -1,7 +1,7 @@
 package co.edu.userservice.controller;
 
-import co.edu.userservice.Auth.LoginRequest;
-import co.edu.userservice.Auth.RegisterRequest;
+import co.edu.userservice.auth.LoginRequest;
+import co.edu.userservice.auth.RegisterRequest;
 import co.edu.userservice.config.JwtService;
 import co.edu.userservice.model.User;
 import co.edu.userservice.service.UserService;
