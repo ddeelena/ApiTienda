@@ -2,10 +2,12 @@ package co.edu.userservice.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 @Entity
 @Data
 @Table(name = "cliente")
+@RequiredArgsConstructor
 public class Cliente {
 
     @Id
@@ -16,8 +18,4 @@ public class Cliente {
     private String correo;
     private String telefono;
     private String direccion;
-
-
-
-
 }

@@ -1,6 +1,8 @@
 package co.edu.userservice.service.impl;
 
+
 import co.edu.userservice.model.Proveedor;
+import co.edu.userservice.repository.ClienteRepository;
 import co.edu.userservice.repository.ProveedorRepository;
 import co.edu.userservice.service.ProveedorService;
 import lombok.RequiredArgsConstructor;
@@ -9,8 +11,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
 @RequiredArgsConstructor
+@Service
 public class ProveedorServiceImpl implements ProveedorService {
 
     private final ProveedorRepository proveedorRepository;
@@ -51,6 +53,4 @@ public class ProveedorServiceImpl implements ProveedorService {
                     return proveedor;
                 });
     }
-
-
 }

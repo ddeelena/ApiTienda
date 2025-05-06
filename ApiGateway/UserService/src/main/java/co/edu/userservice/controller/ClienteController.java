@@ -3,20 +3,16 @@ package co.edu.userservice.controller;
 import co.edu.userservice.model.Cliente;
 import co.edu.userservice.service.ClienteService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/tienda")
+@RequestMapping("/tienda/cliente")
 @RequiredArgsConstructor
-
 public class ClienteController {
-
-    @Autowired
-    private ClienteService clienteService;
+    private final ClienteService clienteService;
 
     @GetMapping
     public List<Cliente> getAllClientes() {
@@ -48,6 +44,4 @@ public class ClienteController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
-
-
 }

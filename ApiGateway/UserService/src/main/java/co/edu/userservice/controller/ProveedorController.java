@@ -1,9 +1,8 @@
 package co.edu.userservice.controller;
 
 import co.edu.userservice.model.Proveedor;
-import co.edu.userservice.repository.ProveedorRepository;
 import co.edu.userservice.service.ProveedorService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,9 +10,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/tienda/proveedor")
+@RequiredArgsConstructor
 public class ProveedorController {
-    @Autowired
-    private ProveedorService proveedorService;
+
+    private final ProveedorService proveedorService;
 
     @GetMapping
     public List<Proveedor> obtenerProveedores() {return proveedorService.getAllProveedores();}
@@ -43,7 +43,4 @@ public class ProveedorController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
-
-
-
 }

@@ -1,7 +1,6 @@
 package co.edu.userservice.service;
 
 import co.edu.userservice.model.Proveedor;
-import co.edu.userservice.model.Proveedor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

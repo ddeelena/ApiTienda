@@ -1,12 +1,11 @@
 package co.edu.userservice.service.impl;
 
+
 import co.edu.userservice.model.Cliente;
-import co.edu.userservice.model.Proveedor;
 import co.edu.userservice.repository.ClienteRepository;
 import co.edu.userservice.service.ClienteService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 import java.util.Optional;
@@ -52,6 +51,5 @@ public class ClienteServiceImpl implements ClienteService {
                     return cliente;
                 });
     }
-
 
 }
