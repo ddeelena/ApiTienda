@@ -5,7 +5,6 @@ import co.edu.userservice.model.Proveedor;
 import co.edu.userservice.repository.ClienteRepository;
 import co.edu.userservice.service.ClienteService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -54,9 +53,5 @@ public class ClienteServiceImpl implements ClienteService {
                 });
     }
 
-    @Override
-    public Optional<Integer> obtenerClienteIdPorUsername(String username) {
-        return clienteRepository.findByUser_Username(username)
-                .map(Cliente::getId);
-    }
+
 }

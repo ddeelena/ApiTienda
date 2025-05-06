@@ -44,11 +44,6 @@ public class ProveedorController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/usuario/{username}")
-    public ResponseEntity<Integer> obtenerCandidatoPorUsername(@PathVariable String username) {
-        return proveedorService.obtenerProveedorIdPorUsername(username)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
+
 
 }

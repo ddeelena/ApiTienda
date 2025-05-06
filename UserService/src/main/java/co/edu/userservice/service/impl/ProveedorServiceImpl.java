@@ -4,7 +4,6 @@ import co.edu.userservice.model.Proveedor;
 import co.edu.userservice.repository.ProveedorRepository;
 import co.edu.userservice.service.ProveedorService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +14,6 @@ import java.util.Optional;
 public class ProveedorServiceImpl implements ProveedorService {
 
     private final ProveedorRepository proveedorRepository;
-    private final PasswordEncoder passwordEncoder;
 
     @Override
     public List<Proveedor> getAllProveedores() {
@@ -54,10 +52,5 @@ public class ProveedorServiceImpl implements ProveedorService {
                 });
     }
 
-    @Override
-    public Optional<Integer> obtenerProveedorIdPorUsername(String username) {
-        return proveedorRepository.findByUser_Username(username)
-                .map(Proveedor::getId);
-    }
 
 }

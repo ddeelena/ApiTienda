@@ -14,5 +14,4 @@ public interface ProveedorService {
     Proveedor createProveedor(Proveedor Proveedor);
     Optional<Proveedor> updateProveedor(Integer id, Proveedor Proveedor);
     Optional<Proveedor> deleteProveedor(Integer id);
-    Optional<Integer> obtenerProveedorIdPorUsername(String username);
 }

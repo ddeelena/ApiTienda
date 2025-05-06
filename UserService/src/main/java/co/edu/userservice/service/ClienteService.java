@@ -13,5 +13,4 @@ public interface ClienteService {
     Cliente createCliente(Cliente cliente);
     Optional<Cliente> updateCliente(Integer id, Cliente cliente);
     Optional<Cliente> deleteCliente(Integer id);
-    Optional<Integer> obtenerClienteIdPorUsername(String username);
 }

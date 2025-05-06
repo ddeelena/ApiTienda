@@ -2,6 +2,7 @@ package co.edu.userservice.controller;
 
 import co.edu.userservice.model.Cliente;
 import co.edu.userservice.service.ClienteService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/tienda/cliente")
+@RequestMapping("/tienda")
+@RequiredArgsConstructor
+
 public class ClienteController {
 
     @Autowired
@@ -46,10 +49,5 @@ public class ClienteController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/usuario/{username}")
-    public ResponseEntity<Integer> obtenerClientePorUsername(@PathVariable String username) {
-        return clienteService.obtenerClienteIdPorUsername(username)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
+
 }

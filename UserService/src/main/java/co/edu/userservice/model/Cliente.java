@@ -1,6 +1,5 @@
 package co.edu.userservice.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,10 +17,7 @@ public class Cliente {
     private String telefono;
     private String direccion;
 
-    @OneToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    @JsonIgnoreProperties({"authorities", "password", "enabled", "accountNonExpired", "credentialsNonExpired", "accountNonLocked"})
-    private User user;
+
 
 
 }
